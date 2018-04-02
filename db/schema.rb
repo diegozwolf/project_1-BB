@@ -10,29 +10,30 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180402162438) do
+ActiveRecord::Schema.define(version: 20180326212307) do
 
   create_table "collaborators", force: :cascade do |t|
     t.string "name"
     t.string "email"
     t.string "topic_interested"
+    t.string "photo"
     t.boolean "is_creator"
     t.string "skill_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string "photo"
   end
 
   create_table "ideas", force: :cascade do |t|
     t.string "name"
     t.string "description"
     t.string "topic"
-    t.string "creator_id"
+    t.integer "creator_id"
+    t.string "idea_photo"
+    t.string "creator_name"
+    t.string "creator_mail"
     t.string "skills"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string "idea_photo"
-    t.string "creator_name"
   end
 
   create_table "skills", force: :cascade do |t|

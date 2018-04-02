@@ -13,5 +13,5 @@
 #
 
 class Idea < ApplicationRecord
-  belongs_to :collaborator
+  belongs_to :creator, class_name: Collaborator
 end

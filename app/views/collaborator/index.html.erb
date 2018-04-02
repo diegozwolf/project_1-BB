@@ -1,3 +1,28 @@
+<!--NAVBAR IDEAS COLLABORATORS -->
+
+<div class="container">
+  <div class="row flex">
+    <div class="col col-sm-3 flex">
+        <div class="select-nav flex">
+            <div class="btn-area flex">
+              <div class="btn-pick flex-column">
+                <i class="fab fa-slideshare"></i>
+                <%= link_to 'Friends', "/" %>
+              </div>
+            </div>
+        </div>
+        <div class="select-nav flex">
+            <div class="btn-area flex">
+              <div class="btn-pick flex-column">
+                <i class="far fa-lightbulb"></i>
+                <%= link_to 'Ideas', "/idea" %>
+              </div>
+            </div>
+        </div>
+  </div>
+</div>
+
+<!-- CARD CONTAINER -->
 <div class="container">
   <div class="row">
     <% @colabs.each do |colab| %>

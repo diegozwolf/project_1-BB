@@ -4,7 +4,10 @@ class CreateIdeas < ActiveRecord::Migration[5.1]
       t.string :name
       t.string :description
       t.string :topic
-      t.string :creator_id
+      t.integer :creator_id
+      t.string :idea_photo
+      t.string :creator_name
+      t.string :creator_mail
       t.string :skills
       t.timestamps
     end

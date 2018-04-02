@@ -13,14 +13,25 @@
  *= require_tree .
  *= require_self
  */
+ @import "font-awesome-sprockets";
+ @import "font-awesome";
+
+ // colors
+ $skill-green:  #009688;
 
 .flex{
   display: flex;
   justify-content: center;
   align-items: center;
 }
+.flex-column{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column-reverse;
+}
 .colab-nav{
-  background: #009688;
+  background:  $skill-green;
   color: white;
   font-family: Arial, Helvetica, sans-serif;
   position: relative;
@@ -41,4 +52,31 @@
   font-family: 'Sofia';
   font-size: 30px;
   font-weight: 600;
+}
+body{
+  background: #f3f3f3 !important;
+}
+
+// buttons
+.select-nav{
+  height: 80px;
+  width: 100%;
+  color: white;
+}
+.btn-area{
+  width: 50%;
+  height: 100%;
+}
+.btn-pick{
+  width: 65px;
+  height: 65px;
+  border-radius: 50%;
+  background:  $skill-green;
+  box-shadow: 2px 4px 22px #888888;
+}
+
+// remove text decoration in a tag
+a, a:hover{
+  text-decoration:none !important;
+  color: white !important;
 }
