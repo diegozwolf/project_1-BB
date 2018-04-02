@@ -74,6 +74,9 @@ body{
   background:  $skill-green;
   box-shadow: 2px 4px 22px #888888;
 }
+.card-link{
+  color: $skill-green !important;
+}
 
 // remove text decoration in a tag
 a, a:hover{
