@@ -15,26 +15,30 @@
             <div class="btn-area flex">
               <div class="btn-pick flex-column">
                 <i class="far fa-lightbulb"></i>
-                <%= link_to 'Ideas', "/idea" %>
+                <%= link_to 'Ideas', "/ideas" %>
               </div>
             </div>
         </div>
   </div>
 </div>
 
-<!-- CARD CONTAINER -->
+
+
+
 <div class="container">
   <div class="row">
-    <% @colabs.each do |colab| %>
+    <% @ideas.each do |idea| %>
         <div class="col col-sm-4 flex">
           <div class="card" style="width: 18rem;">
-            <img class="card-img-top" src="<%=colab.photo%>" alt="Card image cap">
+            <img class="card-img-top" src="<%=idea.idea_photo%>" alt="Card image cap">
             <div class="card-body">
-              <h5 class="card-title"><%=colab.name%></h5>
+              <h3 class="card-title"><%=idea.name%></h3>
+              <p><%=idea.description%></p>
             </div>
             <ul class="list-group list-group-flush">
-              <li class="list-group-item">Email: <%=colab.email%></li>
-              <li class="list-group-item">Interest: <%=colab.topic_interested%></li>
+              <li class="list-group-item">Topic: <%=idea.topic%></li>
+              <li class="list-group-item">Skill Required: <%=idea.skills%></li>
+              <li class="list-group-item">Creator: <%= idea.creator_name %></li>
             </ul>
             <div class="card-body">
               <a href="#" class="card-link">View</a>
